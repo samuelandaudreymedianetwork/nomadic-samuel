@@ -1,26 +1,51 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Nomadic Samuel Web Articles Corpus (EN)",
+  "title": "Nomadic Samuel Article Corpus",
+  "description": "Structured English article corpus from Nomadic Samuel.",
   "type": "object",
-  "additionalProperties": false,
-  "required": [
-    "id",
-    "source",
-    "lang",
-    "title",
-    "text",
-    "domain",
-    "content_hash"
-  ],
+  "additionalProperties": true,
   "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "record_type": {
+      "type": "string"
+    },
     "id": {
       "type": "string"
     },
-    "source": {
+    "dataset": {
       "type": "string"
     },
+    "source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_site": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "lang": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "title": {
       "type": "string"
@@ -29,10 +54,28 @@
       "type": "string"
     },
     "domain": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "content_hash": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "license": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
-  }
+  },
+  "required": [
+    "record_id",
+    "record_type",
+    "title",
+    "text"
+  ]
 }

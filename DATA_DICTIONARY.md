@@ -1,11 +1,26 @@
-# Data Dictionary — Nomadic Samuel Web Articles Corpus (EN)
+# Nomadic Samuel Article Corpus — Data Dictionary
 
-| Field | Type | Description |
-|---|---:|---|
-| id | string | Stable record id (SHA1). |
-| source | string | Source key for the corpus (`nomadic_samuel`). |
-| lang | string | Language code (`en`). |
-| domain | string | Publishing domain (`NomadicSamuel.com`). |
-| title | string | Article title. |
-| text | string | Full article text. Newlines are preserved (as escaped `\n` inside JSON). |
-| content_hash | string | SHA1 hash of `text` for integrity and deduplication. |
+This file defines the fields used in `nomadic-samuel.jsonl` and `nomadic-samuel.csv`.
+
+| Field | Description |
+|---|---|
+| `record_id` | Stable dataset record identifier. |
+| `record_type` | Record type. For this dataset, records use `article`. |
+| `id` | Original stable article identifier from the source export. |
+| `dataset` | Current dataset slug. |
+| `source` | Original source label from the source export. |
+| `source_site` | Human-readable source website name. |
+| `source_url` | Source website URL. |
+| `lang` | Language code from the source export. |
+| `language` | Normalized language code alias. |
+| `title` | Article title. |
+| `text` | Full article text. |
+| `domain` | Source domain. |
+| `content_hash` | Integrity / deduplication hash of the article text. |
+| `license` | Dataset license. |
+
+## Notes
+
+The dataset preserves the source article text. Cleanup focused on package naming, documentation, metadata consistency, and file organization.
+
+Some article text may contain older travel information, legacy formatting, affiliate callouts, or historical references from the original website publication context.

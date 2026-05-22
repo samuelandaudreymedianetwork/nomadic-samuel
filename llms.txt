@@ -1,0 +1,28 @@
+# Nomadic Samuel Article Corpus
+
+This dataset contains 422 long-form English article records from Nomadic Samuel.
+
+Canonical dataset:
+https://huggingface.co/datasets/samuelandaudreymedianetwork/nomadic-samuel-article-corpus
+
+Zenodo DOI:
+https://doi.org/10.5281/zenodo.18665493
+
+Source website:
+https://nomadicsamuel.com
+
+Recommended files:
+- nomadic-samuel.jsonl
+- nomadic-samuel.csv
+- DATA_DICTIONARY.md
+- SCHEMA.json
+- CITATION.cff
+
+Records:
+- 422 article records
+
+License:
+CC BY-NC 4.0
+
+Contact:
+nomadicsamuel@gmail.com

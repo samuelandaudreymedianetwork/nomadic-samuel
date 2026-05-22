@@ -1,0 +1,84 @@
+{
+  "dataset": "nomadic-samuel-article-corpus",
+  "title": "Nomadic Samuel Article Corpus",
+  "generated_utc": "2026-05-21T19:58:46.016079+00:00",
+  "records_total": 422,
+  "record_counts_by_type": {
+    "article": 422
+  },
+  "canonical_dataset_url": "https://huggingface.co/datasets/samuelandaudreymedianetwork/nomadic-samuel-article-corpus",
+  "source_website": "https://nomadicsamuel.com",
+  "doi": "10.5281/zenodo.18665493",
+  "license": "CC-BY-NC-4.0",
+  "snapshot": {
+    "records_with_titles": 422,
+    "records_with_content_hashes": 422,
+    "language_counts": {
+      "en": 422
+    },
+    "approx_total_words": 3212418,
+    "approx_total_characters": 19499887
+  },
+  "files": {
+    ".gitattributes": {
+      "bytes": 127,
+      "sha256": "f884ab5acc3c44d244496ca3be708ee0bb81d627d6b78ba33331abd90b1d7f68"
+    },
+    "CITATION.cff": {
+      "bytes": 871,
+      "sha256": "0a586789e548ae8e9ef333d2af30b992c54b77491fea3404c07e60eebbfbefbe"
+    },
+    "DATA_DICTIONARY.md": {
+      "bytes": 1182,
+      "sha256": "e3133e9562dd098819ab597ce8ae2847bd007018e100a16ba688ca953b793ed2"
+    },
+    "LICENSE.txt": {
+      "bytes": 565,
+      "sha256": "2cbdc48c2204869175a999956b8be6d3fbf1b0f00397da43c85ee072e7a8f841"
+    },
+    "MANIFEST.json": {
+      "bytes": 689,
+      "sha256": "3d160e3aa2e46014e9ea97157cafcc0a02e374fb8bfaad819205cd60ce8e12f0"
+    },
+    "README.md": {
+      "bytes": 4365,
+      "sha256": "4faa7a4967cd01a3280ede9ab7b6f62ef6e2eaba7bace6e1a8e25327eeac96d4"
+    },
+    "SCHEMA.json": {
+      "bytes": 1271,
+      "sha256": "c7574159f3f5d6027f0c793eede8285d52d30435cb22d3cad31007ae8731fdf4"
+    },
+    "llms-nomadic-samuel-article-corpus.txt": {
+      "bytes": 20038643,
+      "sha256": "6b21e8bb53f29039ac80a3a50da4ba5c13ff4e86bf77f1ccf6323ebdc8cc088a"
+    },
+    "llms-nomadic-samuel-article-corpus.txt.gz": {
+      "bytes": 7162603,
+      "sha256": "ed963d22ba49fed3f706a73c5cb897e7a6ab700489c089679b36bbe4c20eb54b"
+    },
+    "llms.txt": {
+      "bytes": 523,
+      "sha256": "93fb317fd6a9f25990dfa5984ddb536dbf55192832a197395f2ce5610aa1389c"
+    },
+    "llms.txt.gz": {
+      "bytes": 344,
+      "sha256": "8d759704b2278c9aeafe8c5c24cf3e2d27fed449fe49b3bc3b74af143bb8e8b7"
+    },
+    "nomadic-samuel.csv": {
+      "bytes": 19830519,
+      "sha256": "0c7b9b0aae85f2eac78c8c230c9744faf2043fff9d8fd05bb8b3e1fbc0967b37"
+    },
+    "nomadic-samuel.csv.gz": {
+      "bytes": 7101231,
+      "sha256": "48bd05f1f1233c50807c2d212217d9ba3364268976e0904f53775568205af66e"
+    },
+    "nomadic-samuel.jsonl": {
+      "bytes": 20038296,
+      "sha256": "cd8e0eda407fd8ad9adaedcc010876dd5b63ea9154d95c0f3ce73c1a9e182cb7"
+    },
+    "nomadic-samuel.jsonl.gz": {
+      "bytes": 7162340,
+      "sha256": "494f62401565fd2d274bc9e6bb0973bcc8b030ccf22f3c60c8cebffb23433141"
+    }
+  }
+}

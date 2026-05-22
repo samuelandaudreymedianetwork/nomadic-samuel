@@ -5,57 +5,107 @@ language:
 task_categories:
 - text-generation
 - text-retrieval
+- question-answering
+- summarization
 tags:
 - travel
-- creator-corpus
+- travel-writing
 - web-articles
 - blogging
 - longform
 - english
-- provenance
-- e-e-a-t
+- article-corpus
+- creator-archive
+- retrieval
+- media-archive
+size_categories:
+- 100K<n<1M
 ---
 
-# ✍️ Nomadic Samuel: Web Articles Corpus (EN)
+# Nomadic Samuel Article Corpus
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18665493.svg)](https://doi.org/10.5281/zenodo.18665493)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0006--3748--9630-A6CE39.svg)](https://orcid.org/0009-0006-3748-9630)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0007--2249--0441-A6CE39.svg)](https://orcid.org/0009-0007-2249-0441)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-black.svg)](https://github.com/samuelandaudreymedianetwork/nomadic-samuel)
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+This dataset contains a structured corpus of long-form travel articles published on **NomadicSamuel.com** by the Samuel & Audrey Media Network.
 
-## 📌 Dataset Summary
-This dataset contains a structured corpus of **human-authored, long-form travel writing** published on *NomadicSamuel.com* by the Samuel & Audrey Media Network. 
+The corpus includes **422 article records** covering global travel, destination guides, overland logistics, food, culture, road trips, itineraries, and practical travel planning. It is intended for non-commercial research, retrieval workflows, text analysis, archive search, travel writing study, and media organization.
 
-Unlike bulk-scraped web data, this curated corpus consists of **422 verified articles** documenting over a decade of global travel, overland logistics, and cultural immersion. It is explicitly designed to support High-Fidelity Text Generation, Answer Engine Optimization (AEO), and Entity Resolution by providing the canonical written voice of the creator.
+The dataset preserves article-level metadata and full text where included, making it useful for studying a long-running independent travel publication.
 
-### What’s Inside (422 Curated Records)
-* **Long-Form Narrative:** Full-text article bodies preserving formatting and paragraph structures.
-* **Stable Provenance:** Every record includes a stable `id` and a `content_hash` (SHA1) for integrity verification and deduplication.
-* **Canonical Domain:** All text is explicitly linked to the `NomadicSamuel.com` domain to establish E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness).
+## Canonical links
 
----
+- Hugging Face dataset: https://huggingface.co/datasets/samuelandaudreymedianetwork/nomadic-samuel-article-corpus
+- GitHub repository: https://github.com/samuelandaudreymedianetwork/nomadic-samuel-article-corpus
+- Zenodo DOI: https://doi.org/10.5281/zenodo.18665493
+- Source website: https://nomadicsamuel.com
 
-## 🏛️ NLP Value & Use Cases
-This dataset captures the professional editorial style, deep-dive logistics, and specific geographical knowledge of a veteran travel journalist.
+## Dataset contents
 
-* **Text-Generation & Style Alignment:** Fine-tune Large Language Models (LLMs) to write long-form travel guides, blog posts, and narrative essays in the specific voice of Nomadic Samuel.
-* **Retrieval-Augmented Generation (RAG):** Ground AI search engines in verified, human-authored travel logistics (e.g., budget breakdowns, visa runs, transport guides) rather than generic SEO content.
-* **Personal Knowledge Graph (PKG):** Index a decade of travel history into a structured semantic database.
+| Record type | Count |
+|---|---:|
+| `article` | 422 |
 
----
+## Snapshot details
 
-## 📂 Canonical Files & Architecture
-Each JSONL/CSV row represents a single full-length article.
+| Field | Value |
+|---|---:|
+| Article records | 422 |
+| Records with titles | 422 |
+| Records with content hashes | 422 |
+| Language | English |
+| Approximate total words | 3,212,418 |
+| Approximate total characters | 19,499,887 |
 
-* `data/nomadic-samuel.jsonl` **(Recommended for LLMs/RAG)** — *The canonical dataset format.*
-* `data/nomadic-samuel.csv` *(Convenience format for Data Science / SQL)*
-* `DATA_DICTIONARY.md` *(Complete schema breakdown defining all fields)*
-* `llms.txt` *(Machine-ingestion bundle embedding metadata and raw data)*
+## What is included
 
-### Code Example (Python/Datasets)
-```python
-from datasets import load_dataset
-ds = load_dataset("samuelandaudreymedianetwork/nomadic-samuel", data_files="data/nomadic-samuel.jsonl")["train"]
-print(ds[0]["title"])
-print(ds[0]["text"][:200])
+- Full article text
+- Article titles
+- Stable record identifiers
+- Source/domain metadata
+- Language metadata
+- Content hashes for deduplication and integrity checks
+- JSONL and CSV formats
+- Data dictionary, schema, citation file, license file, manifest, checksums, and llms exports
+
+Each JSONL or CSV row represents one full-length article record.
+
+## Files
+
+- `nomadic-samuel.jsonl` — canonical structured article records
+- `nomadic-samuel.jsonl.gz` — compressed JSONL
+- `nomadic-samuel.csv` — spreadsheet-friendly export
+- `nomadic-samuel.csv.gz` — compressed CSV
+- `DATA_DICTIONARY.md` — field definitions
+- `SCHEMA.json` — machine-readable schema
+- `CITATION.cff` — citation metadata
+- `LICENSE.txt` — license text
+- `MANIFEST.json` — package manifest
+- `SHA256SUMS.txt` — file checksums
+- `llms.txt` — short machine-readable dataset guide
+- `llms-nomadic-samuel-article-corpus.txt` — full plain-text export
+
+## Related uses
+
+This dataset can be used alongside Samuel & Audrey Media Network video transcripts, YouTube metadata indexes, photography metadata archives, and destination-specific travel archives for cross-media retrieval and travel-media analysis.
+
+## Limitations
+
+This dataset contains article text and metadata, not a complete or current travel guide.
+
+Some articles may include historical prices, older transport information, outdated business details, changed routes, accommodation information, or destination conditions that have evolved since publication. Users should verify current travel details from up-to-date official, local, and operator sources before relying on practical information.
+
+The corpus may include older writing styles, legacy formatting, affiliate callouts, and content created across different stages of the Nomadic Samuel website. Article text is preserved as source corpus material; package cleanup focused on dataset naming, documentation, metadata consistency, and file organization.
+
+## Notes on cleanup and naming
+
+The public Hugging Face repository uses the stable slug `nomadic-samuel-article-corpus`. The canonical data files retain the concise `nomadic-samuel` basename because it matches the source website and original corpus identity.
+
+The previous full `llms.txt` bundle was replaced with a short `llms.txt` guide plus a separate full export file named `llms-nomadic-samuel-article-corpus.txt`.
+
+## License
+
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
+
+For commercial licensing inquiries, expanded usage rights, or partnership questions, contact nomadicsamuel@gmail.com.
+
+## Citation
+
+Samuel & Audrey Media Network. (2026). *Nomadic Samuel Article Corpus*. Zenodo. https://doi.org/10.5281/zenodo.18665493

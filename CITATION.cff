@@ -1,20 +1,25 @@
 cff-version: 1.2.0
 message: "If you use this dataset, please cite it as below."
-title: "Nomadic Samuel Web Articles Corpus (EN)"
 type: dataset
+title: "Nomadic Samuel Article Corpus"
 authors:
   - family-names: "Jeffery"
     given-names: "Samuel"
     affiliation: "Samuel & Audrey Media Network"
+    orcid: "https://orcid.org/0009-0006-3748-9630"
     email: "nomadicsamuel@gmail.com"
   - family-names: "Bergner"
     given-names: "Audrey"
     affiliation: "Samuel & Audrey Media Network"
-url: "https://huggingface.co/datasets/samuelandaudreymedianetwork/nomadic-samuel"
-license: "cc-by-nc-4.0"
-repository-code: "https://huggingface.co/datasets/samuelandaudreymedianetwork/nomadic-samuel"
+    orcid: "https://orcid.org/0009-0007-2249-0441"
+repository-code: "https://huggingface.co/datasets/samuelandaudreymedianetwork/nomadic-samuel-article-corpus"
+url: "https://huggingface.co/datasets/samuelandaudreymedianetwork/nomadic-samuel-article-corpus"
+doi: "10.5281/zenodo.18665493"
+license: "CC-BY-NC-4.0"
 keywords:
-  - "travel writing"
-  - "web articles"
-  - "creator corpus"
-  - "English"
+  - travel writing
+  - web articles
+  - Nomadic Samuel
+  - article corpus
+  - creator archive
+  - English corpus
